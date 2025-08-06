@@ -4,19 +4,28 @@
 
 ```
 prompt-engineering-portfolio/
-├── LICENSE
 ├── README.md
 ├── docs/
 │   ├── philosophy.md
 │   ├── competencies.md
 │   ├── research-methodology.md
-│   └── evaluation-framework.md
-├── examples/
-│   ├── creative-writing/
-│   ├── data-analysis/
-│   ├── code-generation/
-│   ├── reasoning-tasks/
-│   └── multi-modal/
+│   ├── evaluation-framework.md
+│   └── security-and-safety.md
+├── prompting-patterns/
+│   ├── chain-of-thought.md
+│   ├── few-shot-learning.md
+│   ├── role-based-prompting.md
+│   ├── structured-reasoning.md
+│   ├── constraint-specification.md
+│   ├── step-by-step-decomposition.md
+│   ├── context-priming.md
+│   ├── output-formatting.md
+│   ├── error-handling-patterns.md
+│   ├── multi-perspective-analysis.md
+│   ├── iterative-refinement.md
+│   ├── conditional-logic.md
+│   ├── pattern-combinations.md
+│   └── pattern-selection-guide.md
 ├── case-studies/
 │   ├── case-01-customer-service-bot/
 │   │   ├── README.md
@@ -75,6 +84,12 @@ As a prompt engineer, I believe that effective AI interaction is both an art and
 - **Integration Strategy**: Seamlessly incorporating prompts into existing workflows
 - **Monitoring & Maintenance**: Ongoing performance tracking and updates
 
+### Security & Safety
+- **Prompt Injection Defense**: Strategies for protecting against malicious input manipulation
+- **System Prompt Protection**: Techniques for safeguarding proprietary prompts and instructions
+- **Policy Enforcement**: Methods for maintaining model behavior within acceptable boundaries
+- **Jailbreak Mitigation**: Defensive patterns against attempts to bypass safety mechanisms
+
 ## Research Methodology
 
 My research process for prompt development follows a systematic approach:
@@ -103,7 +118,7 @@ I employ a comprehensive evaluation system that combines multiple assessment met
 
 ### Quantitative Metrics
 - **Accuracy**: Correctness of outputs against known standards
-- **Consistency**: Reliability across multiple runs with the same inputs
+- **Consistency**: Reliability across multiple runs with same inputs
 - **Efficiency**: Token usage and response time optimization
 - **Coverage**: Success rate across diverse test cases
 
@@ -119,15 +134,30 @@ I employ a comprehensive evaluation system that combines multiple assessment met
 - **Learning Curve**: Ease of use for new users
 - **Adoption Rate**: How readily prompts are integrated into workflows
 
+### Safety & Security Considerations
+- **Robustness**: Defense against prompt injection and manipulation attempts
+- **Confidentiality**: Protection of system prompts and proprietary information
+- **Compliance**: Adherence to safety policies and ethical guidelines
+- **Vulnerability Assessment**: Proactive testing for potential security weaknesses
+
 ## Portfolio Contents
 
-### Example Prompts
-Explore the `/examples` directory for categorized prompt demonstrations:
-- **Creative Writing**: Story generation, character development, narrative techniques
-- **Data Analysis**: Data interpretation, visualization guidance, statistical analysis
-- **Code Generation**: Programming assistance, debugging, code review
-- **Reasoning Tasks**: Logic problems, mathematical reasoning, critical thinking
-- **Multi-Modal**: Image analysis, document processing, cross-format tasks
+### Prompting Patterns
+Explore the `/prompting-patterns` directory for strategic pattern documentation:
+- **Chain-of-Thought**: When and how to implement reasoning chains for complex problems
+- **Few-Shot Learning**: Optimal example selection and formatting strategies
+- **Role-Based Prompting**: Leveraging expertise personas to improve output quality
+- **Structured Reasoning**: Frameworks for systematic problem decomposition
+- **Constraint Specification**: Defining boundaries and requirements effectively
+- **Step-by-Step Decomposition**: Breaking complex tasks into manageable components
+- **Context Priming**: Setting appropriate background and expectations
+- **Output Formatting**: Structuring responses for specific use cases
+- **Error Handling Patterns**: Building robustness and graceful failure modes
+- **Multi-Perspective Analysis**: Encouraging comprehensive viewpoint consideration
+- **Iterative Refinement**: Patterns for progressive improvement within conversations
+- **Conditional Logic**: Implementing decision trees and branching logic
+- **Pattern Combinations**: Strategic approaches to combining multiple techniques
+- **Pattern Selection Guide**: Decision framework for choosing optimal strategies
 
 ### Case Studies
 The `/case-studies` directory contains detailed project walkthroughs:
@@ -143,10 +173,11 @@ The `/case-studies` directory contains detailed project walkthroughs:
 
 ## Getting Started
 
-1. **Browse Examples**: Start with the `/examples` directory to see prompt techniques in action
-2. **Review Case Studies**: Dive into complete project workflows for a comprehensive understanding
-3. **Explore Documentation**: Read detailed explanations in the `/docs` directory
-4. **Try the Tools**: Experiment with evaluation scripts and frameworks
+1. **Browse Prompting Patterns**: Start with the `/prompting-patterns` directory to understand strategic pattern selection
+2. **Review Pattern Selection Guide**: Use the decision framework to understand when to apply different techniques
+3. **Dive into Case Studies**: Explore complete project workflows for comprehensive understanding
+4. **Explore Documentation**: Read detailed explanations in the `/docs` directory
+5. **Try the Tools**: Experiment with evaluation scripts and frameworks
 
 ## Continuous Improvement
 
