@@ -114,31 +114,15 @@ My research process for prompt development follows a systematic approach:
 
 ## Evaluation Framework
 
-I employ a comprehensive evaluation system that combines multiple assessment methods:
+My evaluation approach centers on systematic testing and quantitative assessment to drive prompt optimization. I utilize structured evaluation platforms, particularly the OpenAI Evals API, to create reproducible testing environments that measure prompt performance against defined criteria.
 
-### Quantitative Metrics
-- **Accuracy**: Correctness of outputs against known standards
-- **Consistency**: Reliability across multiple runs with same inputs
-- **Efficiency**: Token usage and response time optimization
-- **Coverage**: Success rate across diverse test cases
+The framework begins with clear task definition using strategic pattern combinations—such as persona patterns paired with classification patterns—to establish measurable objectives. I design comprehensive test suites that target both standard use cases and edge cases, anticipating potential failure modes where models might misclassify or apply incorrect reasoning.
 
-### Qualitative Assessment
-- **Relevance**: How well outputs address the intended purpose
-- **Clarity**: Readability and comprehensibility of responses
-- **Creativity**: Novel and insightful aspects of outputs (where applicable)
-- **Safety**: Absence of harmful or inappropriate content
+My evaluation setup involves creating structured schemas for test data, implementing automated graders for consistency, and establishing baseline metrics for comparison. I focus particularly on identifying scenarios where models might apply overly broad categories when more specific classifications exist, or conversely, where they fail to recognize general inquiry patterns.
 
-### User Experience Metrics
-- **Satisfaction Scores**: User feedback on prompt effectiveness
-- **Task Completion Rate**: Success in achieving intended outcomes
-- **Learning Curve**: Ease of use for new users
-- **Adoption Rate**: How readily prompts are integrated into workflows
+The assessment process includes both quantitative measurement through API-driven testing and qualitative analysis of model reasoning patterns. I track accuracy rates, consistency across test runs, and performance variations between different prompt iterations. When results indicate systematic issues—such as mishandling of edge cases or inappropriate category application—I apply targeted refinements including enhanced definitions, structured reasoning steps, or pattern integration.
 
-### Safety & Security Considerations
-- **Robustness**: Defense against prompt injection and manipulation attempts
-- **Confidentiality**: Protection of system prompts and proprietary information
-- **Compliance**: Adherence to safety policies and ethical guidelines
-- **Vulnerability Assessment**: Proactive testing for potential security weaknesses
+This iterative methodology ensures that prompt improvements are data-driven rather than intuitive, with each revision tested against the same criteria to measure incremental progress and validate optimization decisions.
 
 ## Portfolio Contents
 
@@ -190,6 +174,10 @@ This portfolio is continuously updated with:
 ## Collaboration
 
 I welcome discussions about prompt engineering techniques, collaboration opportunities, and feedback on the methodologies presented here. Feel free to open issues or reach out for professional inquiries.
+
+---
+
+*This portfolio demonstrates a systematic approach to prompt engineering that prioritizes measurable results, ethical considerations, and practical implementation across diverse use cases.*
 
 ---
 
