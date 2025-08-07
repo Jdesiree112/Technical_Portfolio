@@ -178,7 +178,3 @@ I welcome discussions about prompt engineering techniques, collaboration opportu
 ---
 
 *This portfolio demonstrates a systematic approach to prompt engineering that prioritizes measurable results, ethical considerations, and practical implementation across diverse use cases.*
-
----
-
-*This portfolio demonstrates a systematic approach to prompt engineering that prioritizes measurable results, ethical considerations, and practical implementation across diverse use cases.*
