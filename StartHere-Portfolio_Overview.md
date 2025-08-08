@@ -61,7 +61,7 @@ prompt-engineering-portfolio/
 - **[AI Prompt Engineering Research Methodology.md](./DOCS/research-methodology.md)**: Complete research framework and systematic approach
 - **Analysis and Patterns/**: Pattern implementation guides and optimization strategies
 - **Case Studies/**: Real-world project examples with measurable outcomes
-- **Evaluation and Testing/**: Testing frameworks and performance measurement
+- **[Evaluation and Testing](./DOCS/evaluation-framework.md)**: Testing frameworks and performance measurement
 - **Security and Safety/**: Enterprise security implementation and safety protocols
 
 ## Professional Standards
