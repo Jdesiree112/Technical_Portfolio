@@ -58,7 +58,7 @@ prompt-engineering-portfolio/
 
 ## Key Documents
 
-- **[AI Prompt Engineering Research Methodology.md](./ResearchMethodology.md)**: Complete research framework and systematic approach
+- **[AI Prompt Engineering Research Methodology.md](./DOCS/research-methodology.md)**: Complete research framework and systematic approach
 - **Analysis and Patterns/**: Pattern implementation guides and optimization strategies
 - **Case Studies/**: Real-world project examples with measurable outcomes
 - **Evaluation and Testing/**: Testing frameworks and performance measurement
