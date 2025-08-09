@@ -2,19 +2,47 @@
 
 ## Quick Overview
 
-This portfolio demonstrates systematic prompt engineering expertise with a focus on research-driven development, enterprise security, and measurable optimization. All work emphasizes stakeholder communication, technical investigation, and data-driven refinement.
+This portfolio demonstrates my systematic prompt engineering expertise with a focus on research-driven development, enterprise security, and measurable optimization. All work emphasizes stakeholder communication, technical investigation, and data-driven refinement. This repository serves as a glimpse into my thought process, methodologies, areas of expertise, and some examples to demonstrate my skills. 
 
-## Repository Structure
+## Quick Links
 
-```
-prompt-engineering-portfolio/
-├── README.md
-├── AI Prompt Engineering Research Methodology.md
-├── Analysis and Patterns/
-├── Case Studies/
-├── Evaluation and Testing/
-└── Security and Safety/
-```
+* **[Evaluation Framework](./Evaluation-Framework)** This document demonstrates my approach to systematic prompt evaluation using the OpenAI Evals API, featuring a code example on a hypothetical scenario involving a GPT foundation model.
+* **[Philosophy](./DOCS/philosophy.md)** This document provides a general overview of my philosophy in AI prompting and development.
+* **[AI Prompt Engineering Research Methodology](./DOCS/research-methodology.md)** Here I provide a very thorough overview of my methodology, priorities, and tool usage for researching in preparation for designing prompts. This is a good document to get a detailed understanding of my professional standards.
+* **[Example Prompts](./resources/prompt-libraries.md) This is a continually updated document that contains example system prompts with detailed explanations of the patterns, strategies, and goals they are designed to achieve. Included along with these details, I also address which foundation models may be more receptive to the prompts given their specific strengths.
+
+## Education
+
+**Full Sail University**
+Bachelor's degree, Computer Science Bachelor's degree
+May 2019 - Oct 2021
+*Grade: 3.3*
+
+**Notable Certifications**
+* Python
+* HTML, CSS
+
+**In Progress**
+* **Prompt Engineering**
+  * Vanderbilt University | Coursera
+* **IBM AI Engineering**
+  * IBM | Coursera
+
+## Coding Languages
+* HTML
+* CSS
+* Javascript
+* Python
+
+### Text-Based Information Exchange
+* JSON
+* JSONL
+* XML
+
+### Other
+* API implementation
+* Markdown formatting
+* LaTeX formatting
 
 ## Core Competencies
 
@@ -22,11 +50,16 @@ prompt-engineering-portfolio/
 - Systematic technical investigation using advanced search strategies
 - Stakeholder communication and organizational context research
 - Multi-source validation and primary source verification
+- A/B model testing
+- Model performance evaluations
+- Corpus creation for training purposes
+- Independent, self-managed workflow or team-based workflows
 
 **Prompt Design & Architecture**
 - Structured prompting frameworks and context optimization
 - Chain-of-thought implementation and multi-turn conversation design
 - Pattern recognition and strategic technique selection
+- Employment of prompting patterns, combined or individually, for optimized performance
 
 **Evaluation & Testing**
 - Quantitative assessment using API-driven testing platforms
@@ -56,14 +89,6 @@ prompt-engineering-portfolio/
 
 **Security and Safety**: Comprehensive protection strategies, safety guidelines, and system prompt protection methods.
 
-## Key Documents
-
-- **[AI Prompt Engineering Research Methodology.md](./DOCS/research-methodology.md)**: Complete research framework and systematic approach
-- **Analysis and Patterns/**: Pattern implementation guides and optimization strategies
-- **Case Studies/**: Real-world project examples with measurable outcomes
-- **[Evaluation and Testing](./DOCS/evaluation-framework.md)**: Testing frameworks and performance measurement
-- **Security and Safety/**: Enterprise security implementation and safety protocols
-
 ## Professional Standards
 
 **Systematic Research**: Evidence-based methodology with stakeholder communication  
@@ -71,6 +96,15 @@ prompt-engineering-portfolio/
 **Security Focus**: Enterprise-grade protection and safety implementation  
 **Measurable Results**: Data-driven optimization and quantitative evaluation  
 **Industry Alignment**: Enterprise requirements and professional best practices  
+
+---
+
+## Contact Me
+
+Feel free to contact me to inquire about my services over LinkedIn or through Upwork for short-term contracts. I am open to a long-term role, which you may contact me to discuss through my LinkedIn profile. Thank you for taking the time to review my portfolio.
+
+**[LinkedIn](www.linkedin.com/in/jasminbowman)**
+**[Upwork](https://www.upwork.com/freelancers/~016d86e0cbb9fa9c82?mp_source=share)**
 
 ---
 
