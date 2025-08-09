@@ -6,10 +6,16 @@ This portfolio demonstrates my systematic prompt engineering expertise with a fo
 
 ## Quick Links
 
-* **[Evaluation Framework](./Evaluation-Framework)** This document demonstrates my approach to systematic prompt evaluation using the OpenAI Evals API, featuring a code example on a hypothetical scenario involving a GPT foundation model.
-* **[Philosophy](./DOCS/philosophy.md)** This document provides a general overview of my philosophy in AI prompting and development.
-* **[AI Prompt Engineering Research Methodology](./DOCS/research-methodology.md)** Here I provide a very thorough overview of my methodology, priorities, and tool usage for researching in preparation for designing prompts. This is a good document to get a detailed understanding of my professional standards.
-* **[Example Prompts](./resources/prompt-libraries.md) This is a continually updated document that contains example system prompts with detailed explanations of the patterns, strategies, and goals they are designed to achieve. Included along with these details, I also address which foundation models may be more receptive to the prompts given their specific strengths.
+* **[Evaluation Framework](./Evaluation-Framework)**
+  This document demonstrates my approach to systematic prompt evaluation using the OpenAI Evals API, featuring a code example on a hypothetical scenario involving a GPT foundation model.
+* **[Philosophy](./DOCS/philosophy.md)**
+  This document provides a general overview of my philosophy in AI prompting and development.
+* **[AI Prompt Engineering Research Methodology](./DOCS/research-methodology.md)**
+  Here I provide a very thorough overview of my methodology, priorities, and tool usage for researching in preparation for designing prompts. This is a good document to get a detailed understanding of my professional standards.
+* **[Example Prompts](./resources/prompt-libraries.md)**
+  This is a continually updated document that contains example system prompts with detailed explanations of the patterns, strategies, and goals they are designed to achieve. Included along with these details, I also address which foundation models may be more receptive to the prompts given their specific strengths.
+
+---
 
 ## Education
 
