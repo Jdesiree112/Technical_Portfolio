@@ -27,8 +27,11 @@ This is a continually updated document that contains example system prompts with
 ## Education
 
 **Full Sail University**
+
 Bachelor's degree, Computer Science Bachelor's degree
+
 May 2019 - Oct 2021
+
 *Grade: 3.3*
 
 **Notable Certifications**
