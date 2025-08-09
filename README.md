@@ -99,8 +99,6 @@ May 2019 - Oct 2021
 
 **Analysis and Patterns**: Strategic pattern documentation including chain-of-thought, few-shot learning, role-based prompting, and optimization strategies.
 
-**Case Studies**: Complete project workflows demonstrating customer service optimization, content generation systems, and technical documentation development.
-
 **Evaluation and Testing**: Systematic testing methodologies, performance metrics, and benchmarking approaches.
 
 **Security and Safety**: Comprehensive protection strategies, safety guidelines, and system prompt protection methods.
