@@ -2,7 +2,7 @@
 
 ## Quick Overview
 
-This portfolio demonstrates my systematic prompt engineering expertise with a focus on research-driven development, enterprise security, and measurable optimization. All work emphasizes stakeholder communication, technical investigation, and data-driven refinement. This repository serves as a glimpse into my thought process, methodologies, areas of expertise, and some examples to demonstrate my skills. 
+This portfolio demonstrates my systematic prompt engineering expertise with a focus on research-driven development, content strategy, and measurable optimization. All work emphasizes stakeholder communication, technical investigation, data-driven refinement, and brand voice integration. This repository serves as a glimpse into my thought process, methodologies, areas of expertise, and examples demonstrating my multidisciplinary skills in technical prompt engineering and content strategy implementation.
 
 ## Quick Links
 
@@ -12,15 +12,15 @@ This document demonstrates my approach to systematic prompt evaluation using the
   
 * **[Philosophy](./DOCS/philosophy.md)**
   
-This document provides a general overview of my philosophy in AI prompting and development.
+This document provides a comprehensive overview of my philosophy in AI prompting, content strategy, brand voice development, and UI/UX design principles.
   
 * **[AI Prompt Engineering Research Methodology](./DOCS/research-methodology.md)**
   
-Here I provide a very thorough overview of my methodology, priorities, and tool usage for researching in preparation for designing prompts. This is a good document to get a detailed understanding of my professional standards.
+Here I provide a thorough overview of my methodology, priorities, and tool usage for researching in preparation for designing prompts. This document details my professional standards for stakeholder-driven development.
 
 * **[Example Prompts](./resources/prompt-libraries.md)**
   
-This is a continually updated document that contains example system prompts with detailed explanations of the patterns, strategies, and goals they are designed to achieve. Included along with these details, I also address which foundation models may be more receptive to the prompts given their specific strengths.
+This continually updated document contains example system prompts with detailed explanations of the patterns, strategies, and goals they are designed to achieve. Includes analysis of foundation model compatibility and content strategy considerations.
 
 ---
 
@@ -28,7 +28,7 @@ This is a continually updated document that contains example system prompts with
 
 **Full Sail University**
 
-Bachelor's degree, Computer Science Bachelor's degree
+Bachelor's degree, Computer Science
 
 May 2019 - Oct 2021
 
@@ -36,80 +36,121 @@ May 2019 - Oct 2021
 
 **Notable Certifications**
 * Python
+* SQL
 * HTML, CSS
 
+**Recently Completed**
+* **LangChain and RAG Implementation**
+  * IBM | Coursera
+* **Prompt Engineering Fundamentals**
+  * Google | Coursera
+
 **In Progress**
-* **Prompt Engineering**
-  * Vanderbilt University | Coursera
-* **IBM AI Engineering**
+* **Advanced AI Engineering**
   * IBM | Coursera
 
-## Coding Languages
-* HTML
-* CSS
-* Javascript
+## Technical Skills
+
+### Programming Languages
 * Python
+* JavaScript
+* HTML, CSS
+* SQL
 
-### Text-Based Information Exchange
-* JSON
-* JSONL
-* XML
+### AI/ML Frameworks & Tools
+* LangChain AI orchestration and prompt templates
+* Hugging Face Transformers
+* OpenAI API integration
+* Gradio
+* Streamlit
 
-### Other
+### Development & Deployment
+* Git/GitHub
 * API implementation
+* HuggingFace Spaces
+* Content Management Systems
+* Web-based chatbot interfaces
+
+### Data Formats & Documentation
+* JSON, JSONL, XML
 * Markdown formatting
 * LaTeX formatting
 
 ## Core Competencies
 
+**Content Strategy & Editorial**
+- Brand voice development and implementation using LangChain prompt templates
+- AI content evaluation for tone, accuracy, and brand alignment
+- Content strategy framework design
+- Editorial review processes and quality assurance
+- UX writing and digital content optimization
+
 **Research & Analysis**
 - Systematic technical investigation using advanced search strategies
 - Stakeholder communication and organizational context research
 - Multi-source validation and primary source verification
-- A/B model testing
-- Model performance evaluations
-- Corpus creation for training purposes
-- Independent, self-managed workflow or team-based workflows
+- A/B content testing and model performance evaluations
+- User research and pain point analysis
 
 **Prompt Design & Architecture**
+- LangChain orchestration for complex AI workflows
 - Structured prompting frameworks and context optimization
 - Chain-of-thought implementation and multi-turn conversation design
 - Pattern recognition and strategic technique selection
-- Employment of prompting patterns, combined or individually, for optimized performance
+- Brand-aligned prompt development for enterprise applications
+- LangChain prompt templates tailored for targeted behavior and utility-based functions
+
+**UI/UX Design & Implementation**
+- User interface design for AI applications
+- Web-based chatbot interface development
+- Brand identity integration and visual hierarchy
+- Accessibility considerations and inclusive design
+- Cross-functional collaboration with development teams
 
 **Evaluation & Testing**
 - Quantitative assessment using API-driven testing platforms
+- Content quality metrics and editorial standards enforcement
 - Edge case analysis and iterative optimization
-- Data-driven refinement based on measurable performance metrics
+- Performance monitoring and analytics integration
 
 **Security & Safety**
 - Prompt injection defense and system prompt protection
-- Safety policy enforcement and jailbreak mitigation
-- Enterprise-grade security implementation
+- Content safety and responsible AI implementation
+- Enterprise-grade security considerations
+
+**Cross-Departmental Communication**
+- Multidisciplinary expertise enabling effective communication across technical, creative, and business teams
+- Translation of technical concepts for non-technical stakeholders
+- Bridging requirements between development, content, and design departments
 
 ## Professional Approach
 
-**Research Methodology**: Two-part systematic approach combining stakeholder communication with technical investigation using Google search operators and authoritative source validation.
+**Research Methodology**: Comprehensive approach combining stakeholder feedback analysis, user research, and technical investigation to inform content strategy and prompt design decisions.
 
-**Evaluation Framework**: Structured testing environments with quantitative metrics, automated assessment, and iterative optimization based on performance data.
+**Content Strategy Integration**: Brand voice development through systematic analysis of existing assets, stakeholder requirements, and target audience needs, implemented via LangChain prompt templates.
 
-**Security Integration**: Professional-grade safety considerations integrated from initial design through deployment.
+**AI Orchestration**: Advanced workflow design using LangChain for complex multi-step processes, brand voice consistency, and targeted behavioral outcomes.
 
-## Portfolio Contents
+**Evaluation Framework**: Multi-layered testing encompassing technical performance metrics, content quality assessment, and brand alignment verification.
 
-**Analysis and Patterns**: Strategic pattern documentation including chain-of-thought, few-shot learning, role-based prompting, and optimization strategies.
+**Cross-Functional Collaboration**: Proven ability to work effectively with development teams, content strategists, UX designers, and business stakeholders to deliver cohesive AI-powered solutions.
 
-**Evaluation and Testing**: Systematic testing methodologies, performance metrics, and benchmarking approaches.
+## Portfolio Highlights
 
-**Security and Safety**: Comprehensive protection strategies, safety guidelines, and system prompt protection methods.
+**[EduBot](https://huggingface.co/spaces/jdesiree/EduBot)**: Educational AI assistant deployed on HuggingFace Spaces, demonstrating end-to-end development from user research through deployment. Features custom web-based chatbot interface, LangChain orchestration, brand voice implementation, and performance monitoring.
+
+**Content Evaluation Systems**: Systematic frameworks for assessing AI-generated content quality, including A/B testing methodologies and training data curation using LangChain prompt templates.
+
+**Brand Voice Integration**: Demonstrated ability to translate organizational identity into AI conversation design through stakeholder collaboration, existing asset analysis, and LangChain prompt template customization.
 
 ## Professional Standards
 
-**Systematic Research**: Evidence-based methodology with stakeholder communication  
-**Technical Excellence**: Advanced pattern implementation and cross-model compatibility  
-**Security Focus**: Enterprise-grade protection and safety implementation  
-**Measurable Results**: Data-driven optimization and quantitative evaluation  
-**Industry Alignment**: Enterprise requirements and professional best practices  
+**User-Centered Design**: Content and interface decisions driven by user research and stakeholder feedback  
+**Technical Excellence**: Advanced implementation across multiple AI frameworks and deployment platforms  
+**Brand Consistency**: Systematic approach to maintaining voice and identity across AI interactions through tailored prompt templates  
+**Measurable Results**: Data-driven optimization with quantitative evaluation and content quality metrics  
+**Industry Alignment**: Enterprise requirements and cross-functional collaboration best practices  
+**Multidisciplinary Integration**: Effective communication and collaboration across technical, creative, and business domains  
 
 ---
 
@@ -122,4 +163,4 @@ Feel free to contact me to inquire about my services over LinkedIn or through Up
 
 ---
 
-*Research-driven prompt engineering with systematic methodology, security focus, and measurable optimization for enterprise environments.*
+*AI prompt engineering with integrated content strategy, brand voice development, and user-centered design for enterprise applications.*
