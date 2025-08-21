@@ -6,7 +6,7 @@ This portfolio demonstrates my systematic prompt engineering expertise with a fo
 
 ## Quick Links
 
-* **[Evaluation Framework](./Evaluation-Framework)**
+* **[Evaluation Framework](DOCS/evaluation-framework.md)**
   
 This document demonstrates my approach to systematic prompt evaluation using the OpenAI Evals API, featuring a code example on a hypothetical scenario involving a GPT foundation model.
   
