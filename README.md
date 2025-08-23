@@ -9,6 +9,10 @@ This portfolio demonstrates my systematic prompt engineering expertise with a fo
 * **[Evaluation Framework](DOCS/evaluation-framework.md)**
   
 This document demonstrates my approach to systematic prompt evaluation using the OpenAI Evals API, featuring a code example on a hypothetical scenario involving a GPT foundation model.
+
+* **[Edubot Evaluation Casestudy](CaseStudy_EduBot)**
+
+As an alternative to the general evaluation overview documentation, I have made available a comprehensive case study following the evaluation and progression of my EduBot. This collection of documents covers in detail the unique approach taken to evaluate and intelligently improve EduBot through iterative cycles of analysis, testing, evaluation, and adjustments.
   
 * **[Philosophy](./DOCS/philosophy.md)**
   
@@ -58,7 +62,7 @@ May 2019 - Oct 2021
 * SQL
 
 ### AI/ML Frameworks & Tools
-* LangChain AI orchestration and prompt templates
+* LangChain AI orchestration, tool binding, and prompt templates
 * Hugging Face Transformers
 * OpenAI API integration
 * Gradio
@@ -112,11 +116,20 @@ May 2019 - Oct 2021
 - Content quality metrics and editorial standards enforcement
 - Edge case analysis and iterative optimization
 - Performance monitoring and analytics integration
+- Systematic rubric development and benchmark testing methodologies
+- Academic integrity evaluation frameworks for educational AI systems
 
 **Security & Safety**
 - Prompt injection defense and system prompt protection
 - Content safety and responsible AI implementation
 - Enterprise-grade security considerations
+
+**Educational Technology & AI Tutoring Systems**
+- Educational AI system design with academic integrity preservation
+- Tool integration for enhanced learning experiences (graph generation, LaTeX implementation)
+- Iterative improvement cycles through systematic evaluation and testing
+- Problem-solving approach prioritizing capability enhancement over restrictive measures
+- Multi-modal educational content delivery and assessment
 
 **Cross-Departmental Communication**
 - Multidisciplinary expertise enabling effective communication across technical, creative, and business teams
@@ -137,7 +150,7 @@ May 2019 - Oct 2021
 
 ## Portfolio Highlights
 
-**[EduBot](https://huggingface.co/spaces/jdesiree/EduBot)**: Educational AI assistant deployed on HuggingFace Spaces, demonstrating end-to-end development from user research through deployment. Features custom web-based chatbot interface, LangChain orchestration, brand voice implementation, and performance monitoring.
+**[EduBot](https://huggingface.co/spaces/jdesiree/EduBot)**: Educational AI assistant deployed on HuggingFace Spaces, demonstrating end-to-end development from user research through deployment. Features custom web-based chatbot interface, LangChain orchestration, brand voice implementation, performance monitoring, and integrated graph-generating tool. Showcases an innovative problem-solving approach where technical capabilities were enhanced rather than implementing restrictive measures to address model dishonesty issues, resulting in improved educational functionality through data visualization integration.
 
 **Content Evaluation Systems**: Systematic frameworks for assessing AI-generated content quality, including A/B testing methodologies and training data curation using LangChain prompt templates.
 
