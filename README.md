@@ -10,9 +10,9 @@ This portfolio demonstrates my systematic prompt engineering expertise with a fo
   
 This document demonstrates my approach to systematic prompt evaluation using the OpenAI Evals API, featuring a code example on a hypothetical scenario involving a GPT foundation model.
 
-* **[Edubot Evaluation Casestudy](CaseStudy_EduBot)**
+* **[Mimir Evaluation Casestudy](CaseStudy_Mimir)**
 
-As an alternative to the general evaluation overview documentation, I have made available a comprehensive case study following the evaluation and progression of my EduBot. This collection of documents covers in detail the unique approach taken to evaluate and intelligently improve EduBot through iterative cycles of analysis, testing, evaluation, and adjustments.
+As an alternative to the general evaluation overview documentation, I have made available a comprehensive case study following the evaluation and progression of my Mimir. This collection of documents covers in detail the unique approach taken to evaluate and intelligently improve Mimir through iterative cycles of analysis, testing, evaluation, and adjustments.
   
 * **[Philosophy](./DOCS/philosophy.md)**
   
@@ -150,7 +150,7 @@ May 2019 - Oct 2021
 
 ## Portfolio Highlights
 
-**[EduBot](https://huggingface.co/spaces/jdesiree/EduBot)**: Educational AI assistant deployed on HuggingFace Spaces, demonstrating end-to-end development from user research through deployment. Features custom web-based chatbot interface, LangChain orchestration, brand voice implementation, performance monitoring, and integrated graph-generating tool. Showcases an innovative problem-solving approach where technical capabilities were enhanced rather than implementing restrictive measures to address model dishonesty issues, resulting in improved educational functionality through data visualization integration.
+**[Mimir](https://huggingface.co/spaces/jdesiree/Mimir)**: Educational AI assistant deployed on HuggingFace Spaces, demonstrating end-to-end development from user research through deployment. Features custom web-based chatbot interface, LangChain orchestration, brand voice implementation, performance monitoring, and integrated graph-generating tool. Showcases an innovative problem-solving approach where technical capabilities were enhanced rather than implementing restrictive measures to address model dishonesty issues, resulting in improved educational functionality through data visualization integration.
 
 **Content Evaluation Systems**: Systematic frameworks for assessing AI-generated content quality, including A/B testing methodologies and training data curation using LangChain prompt templates.
 
