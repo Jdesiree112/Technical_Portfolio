@@ -8,7 +8,7 @@ This portfolio demonstrates my systematic prompt engineering expertise with a fo
 
 * **[Evaluation Framework](DOCS/evaluation-framework.md)**
   
-This document demonstrates my approach to systematic prompt evaluation using the OpenAI Evals API, featuring a code example on a hypothetical scenario involving a GPT foundation model.
+This document demonstrates my comprehensive approach to AI application evaluation and performance optimization, featuring real-world methodologies used in developing Mimir, an AI tutoring application. It showcases systematic metrics-driven analysis, manual prompt sampling with structured benchmark testing, and quantitative assessment workflows that achieved 94% performance improvements. The document includes before/after comparative analysis, debug infrastructure implementation, and hypothesis-driven root cause investigation frameworks. Additionally, it demonstrates my capability to implement automated evaluation systems using APIs like OpenAI Evals for large-scale testing scenarios.
 
 * **[Mimir Evaluation Casestudy](CaseStudy_Mimir)**
 
