@@ -2,7 +2,7 @@
 
 ## Quick Overview
 
-This portfolio demonstrates my systematic prompt engineering expertise with a focus on research-driven development, content strategy, and measurable optimization. All work emphasizes stakeholder communication, technical investigation, data-driven refinement, and brand voice integration. This repository serves as a glimpse into my thought process, methodologies, areas of expertise, and examples demonstrating my multidisciplinary skills in technical prompt engineering and content strategy implementation.
+This portfolio demonstrates my systematic prompt engineering expertise with a focus on research-driven development, content strategy, and measurable optimization. All work emphasizes stakeholder communication, technical investigation, data-driven refinement, and brand voice integration. This repository serves as a glimpse into my thought process, methodologies, areas of expertise, and examples demonstrating my multidisciplinary skills in technical prompt engineering, AI Engineering, UI/UX, and content strategy implementation.
 
 ## Quick Links
 
