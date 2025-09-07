@@ -22,7 +22,7 @@ This document provides a comprehensive overview of my philosophy in AI prompting
   
 Here I provide a thorough overview of my methodology, priorities, and tool usage for researching in preparation for designing prompts. This document details my professional standards for stakeholder-driven development.
 
-  * Expanding on this, you may also be interested in viewing recent problem-solving documents for **Mimir.** **[Here](CaseStudy_Mimir/Issue_ProblemSolvingCaseStudy/Issue-Solutions_Overview.md)** you can view an example of my workflow, problem solving, and evaluation-driven refinements. Also included are some performance metrics selected for publishing that highlight the impact of my strategy.
+  * You may also be interested in viewing development documentation for **Mimir.** **[Here](CaseStudy_Mimir/Issue_ProblemSolvingCaseStudy)** you can explore ongoing case studies documenting challenges, solutions, and iterative improvements throughout the application's development process.
 
 * **[Example Prompts](./resources/prompt-libraries.md)**
   
