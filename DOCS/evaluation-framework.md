@@ -10,7 +10,7 @@ My approach to AI application quality assurance employs multiple complementary m
 
 • **Quantitative Performance Metrics**: Systematic logging and measurement of response times, resource utilization, and throughput across all system components to identify bottlenecks and validate optimizations
 
-• **[Manual Prompt Sampling & Quality Assessment](./CaseStudy_Mimir/evaluation/Benchmark_Test_Cases.md)**: Iterative testing using structured benchmark prompts to evaluate educational effectiveness, academic integrity compliance, and subject-specific functionality across diverse use cases
+• **Manual Prompt Sampling & Quality Assessment**: Iterative testing using structured benchmark prompts to evaluate educational effectiveness, academic integrity compliance, and subject-specific functionality across diverse use cases
 
 • **Before/After Comparative Analysis**: Structured evaluation of user experience improvements through systematic problem identification, solution implementation, and measurable outcome validation
 
