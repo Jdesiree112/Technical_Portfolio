@@ -529,7 +529,7 @@ This update integrates the decision logic outputs, adding the appropriate instru
 
 ```python
 def call_model(state: EducationalAgentState) -> dict:
-            """Call the LLM to generate a response with decision logic integration"""
+            """Call the LLM to generate a response with proper prompt template integration"""
             start_call_model_time = time.perf_counter()
             current_time = datetime.now()
             
@@ -546,7 +546,7 @@ def call_model(state: EducationalAgentState) -> dict:
                 return {"messages": [AIMessage(content="I didn't receive a question. Please ask me something!")]}
             
             try:
-                # Convert LangGraph messages to conversation state format
+                # Convert LangGraph messages to conversation state format for prompt selection
                 conversation_state = []
                 for msg in messages:
                     if isinstance(msg, HumanMessage):
@@ -554,19 +554,36 @@ def call_model(state: EducationalAgentState) -> dict:
                     elif isinstance(msg, AIMessage):
                         conversation_state.append({"role": "assistant", "content": msg.content})
                 
-                # Check if tools are needed
+                # Check if tools are needed from state
                 needs_tools = state.get("needs_tools", False)
                 
-                # Determine appropriate prompt segments (excluding CORE_IDENTITY)
+                # Determine appropriate prompt segments (this returns the combined segments, NOT including CORE_IDENTITY)
                 prompt_segments = determine_prompt_segments(user_query, conversation_state, needs_tools)
                 
-                # Combine with CORE_IDENTITY and user query
-                full_prompt = f"""{CORE_IDENTITY}
-        
-        {prompt_segments}
-        
-        ## Current User Query
-        {user_query}"""
+                # Build conversation history for context (last 4 exchanges to stay within token limits)
+                recent_history = ""
+                if len(conversation_state) > 1:
+                    recent_exchanges = conversation_state[-8:]  # Last 4 user-assistant pairs
+                    history_parts = []
+                    for msg in recent_exchanges:
+                        if msg["role"] == "user":
+                            history_parts.append(f"User: {msg['content']}")
+                        elif msg["role"] == "assistant":
+                            history_parts.append(f"Assistant: {msg['content']}")
+                    
+                    if history_parts:
+                        recent_history = f"""
+## Recent Conversation History
+{chr(10).join(history_parts)}
+"""
+                
+                # Create the complete prompt template using f-string
+                complete_prompt = f"""{CORE_IDENTITY}
+{prompt_segments}
+{recent_history}## Current User Query
+{user_query}
+## Response
+Please provide a helpful, educational response following the guidelines above:"""
                 
                 # Log the full prompt for debugging (if DEBUG_STATE is enabled)
                 if DEBUG_STATE:
@@ -575,13 +592,14 @@ def call_model(state: EducationalAgentState) -> dict:
                         f.write(f"\n=== {timestamp} ===\n")
                         f.write(f"User Query: {user_query}\n")
                         f.write(f"Needs Tools: {needs_tools}\n")
-                        f.write(f"Full Prompt:\n{full_prompt}\n")
+                        f.write(f"Conversation Length: {len(conversation_state)}\n")
+                        f.write(f"Complete Prompt:\n{complete_prompt}\n")
                         f.write("=" * 50 + "\n")
                 
-                # Generate response
-                response = self.llm.invoke(full_prompt)
+                # Generate response using the complete prompt
+                response = self.llm.invoke(complete_prompt)
                 
-                # Create AI message (add only original query to history, not full prompt)
+                # Create AI message
                 ai_message = AIMessage(content=response)
                 
                 end_call_model_time = time.perf_counter()
@@ -598,115 +616,4 @@ def call_model(state: EducationalAgentState) -> dict:
                 
                 error_message = AIMessage(content=f"I encountered an error generating a response: {str(e)}")
                 return {"messages": [error_message]}
-            
-                def should_continue(state: EducationalAgentState) -> str:
-                    """Route to tools or end based on the last message"""
-                    last_message = state["messages"][-1]
-                    
-                    # Check if the last message has tool calls
-                    if hasattr(last_message, "tool_calls") and last_message.tool_calls:
-                        return "tools"
-                    else:
-                        return END
-            
-                def make_tool_decision(state: EducationalAgentState) -> dict:
-                    """Decide whether tools are needed and update state"""
-                    start_tool_decision_time = time.perf_counter()
-                    current_time = datetime.now()
-                    
-                    messages = state["messages"]
-                    
-                    # Get the latest human message
-                    user_query = ""
-                    for msg in reversed(messages):
-                        if isinstance(msg, HumanMessage):
-                            user_query = msg.content
-                            break
-                    
-                    if not user_query:
-                        return {"needs_tools": False}
-                    
-                    # Use the tool decision engine
-                    needs_visualization = self.tool_decision_engine.should_use_visualization(user_query)
-                    
-                    end_tool_decision_time = time.perf_counter()
-                    tool_decision_time = end_tool_decision_time - start_tool_decision_time
-                    log_metric(f"Tool decision workflow time: {tool_decision_time:0.4f} seconds. Decision: {needs_visualization}. Timestamp: {current_time:%Y-%m-%d %H:%M:%S}")
-                    
-                    return {"needs_tools": needs_visualization}
-            
-                # Create the workflow graph
-                workflow = StateGraph(EducationalAgentState)
-                
-                # Add nodes
-                workflow.add_node("decide_tools", make_tool_decision)
-                workflow.add_node("call_model", call_model)
-                workflow.add_node("tools", tool_node)
-                
-                # Add edges
-                workflow.add_edge(START, "decide_tools")
-                workflow.add_edge("decide_tools", "call_model")
-                
-                # Add conditional edge from call_model
-                workflow.add_conditional_edges(
-                    "call_model",
-                    should_continue,
-                    {"tools": "tools", END: END}
-                )
-                
-                # After tools, go back to call_model for final response
-                workflow.add_edge("tools", "call_model")
-                
-                # Compile the workflow
-                return workflow.compile(checkpointer=MemorySaver())
-        
-            def process_query(self, user_input: str, thread_id: str = "default") -> str:
-                """Process a user query through the LangGraph workflow"""
-                start_process_query_time = time.perf_counter()
-                current_time = datetime.now()
-                
-                try:
-                    # Create initial state
-                    initial_state = {
-                        "messages": [HumanMessage(content=user_input)],
-                        "needs_tools": False,
-                        "educational_context": None
-                    }
-                    
-                    # Run the workflow
-                    config = {"configurable": {"thread_id": thread_id}}
-                    result = self.app.invoke(initial_state, config)
-                    
-                    # Extract the final response
-                    messages = result["messages"]
-                    
-                    # Combine AI message and tool results
-                    response_parts = []
-                    
-                    for msg in messages:
-                        if isinstance(msg, AIMessage):
-                            # Clean up the response - remove JSON blocks if tools were used
-                            content = msg.content
-                            if "```json" in content and result.get("needs_tools", False):
-                                # Remove JSON blocks from display since tools handle visualization
-                                content = re.sub(r'```json.*?```', '', content, flags=re.DOTALL)
-                                content = content.strip()
-                            response_parts.append(content)
-                        elif isinstance(msg, ToolMessage):
-                            response_parts.append(msg.content)
-                    
-                    final_response = "\n\n".join(response_parts).strip()
-                    
-                    end_process_query_time = time.perf_counter()
-                    process_query_time = end_process_query_time - start_process_query_time
-                    log_metric(f"Total query processing time: {process_query_time:0.4f} seconds. Input: '{user_input[:50]}...'. Timestamp: {current_time:%Y-%m-%d %H:%M:%S}")
-                    
-                    return final_response if final_response else "I'm having trouble generating a response. Please try rephrasing your question."
-                    
-                except Exception as e:
-                    logger.error(f"Error in process_query: {e}")
-                    end_process_query_time = time.perf_counter()
-                    process_query_time = end_process_query_time - start_process_query_time
-                    log_metric(f"Total query processing time (error): {process_query_time:0.4f} seconds. Timestamp: {current_time:%Y-%m-%d %H:%M:%S}")
-                    return f"I encountered an error processing your request: {str(e)}"
 ```
