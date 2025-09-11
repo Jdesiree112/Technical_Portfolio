@@ -1,4 +1,4 @@
-# Prompt Engineering and AI Engineering Portfolio
+# Technical Portfolio
 
 ## Quick Overview
 
