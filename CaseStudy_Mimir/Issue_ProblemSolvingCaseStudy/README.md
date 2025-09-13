@@ -7,3 +7,5 @@ This collection of Issue-Solution Documents covers highlighted instances of prob
 2. [Metrics Recording](./Issue-Solutions_Entry002.md)
 3. [Summary of UX/UI Improvements Made](./Issue-Solutions_Entry003.md)
 4. [Conversation Flow Redesign](./Issue-Solutions_Entry004.md)
+5. [Metrics Redesign](./Issue-Solutions_Entry005.md)
+6. [ML Classification Decision Tree](./Issue-Solutions_Entry006.md)
