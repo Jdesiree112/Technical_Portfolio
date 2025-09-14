@@ -9,3 +9,4 @@ This collection of Issue-Solution Documents covers highlighted instances of prob
 4. [Conversation Flow Redesign](./Issue-Solutions_Entry004.md)
 5. [Metrics Redesign](./Issue-Solutions_Entry005.md)
 6. [ML Classification Decision Tree](./Issue-Solutions_Entry006.md)
+7. [Fine Tuning Mimir-Phi3 Model](.Issue-Solutions_Entry007.md)
