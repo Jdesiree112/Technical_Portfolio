@@ -18,7 +18,7 @@ Multiple approaches have been implemented to address verbosity, instruction-foll
 | Code Review | Code has been reviewed and meets the standard for this project.|
 | Documentation Updated | This Issue and Solution report has been updated to include results and reflections. API Documentation has been revised. |
 | Security Measures and Considerations | The new system has been checked for vulnerabilities |
-| User Interface Finalized | The user interface should have no changes. It has been verified that the user interface is not affected. |
+| User Interface Finalized | The user interface is updated with an added button to the group in the bottom right. The new button indicates by color the status of the models, with details displayed on hover. No other changes are visible in the user interface.|
 | Regression Testing | Mimir has been tested to ensure no regression of the application function. |
 | Deployment Ready | The code is ready to deploy in HuggingFace Spaces. |
 | Technical Debt Evaluation | The code and automated evaluations and/or metrics tracking have been assessed, ensuring no unnecessary technical debt. All needed revisions have been made. |
