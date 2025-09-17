@@ -2,7 +2,17 @@
 
 ## Quick Overview
 
-This portfolio demonstrates my systematic prompt engineering expertise with a focus on research-driven development, content strategy, and measurable optimization. All work emphasizes stakeholder communication, technical investigation, data-driven refinement, and brand voice integration. This repository serves as a glimpse into my thought process, methodologies, areas of expertise, and examples demonstrating my multidisciplinary skills in technical prompt engineering, AI Engineering, UI/UX, and content strategy implementation.
+This portfolio demonstrates my comprehensive AI development expertise spanning the complete software development lifecycle—from user story definition through deployment and iterative optimization. My work showcases systematic, sprint-based methodologies with integrated evaluation and quality assurance, delivering production-ready AI systems using LangChain/LangGraph, full-stack development, and advanced ML techniques. 
+
+Featured is an extensive case study following the development of Mimir, a deployed AI educational assistant, demonstrating end-to-end capabilities in AI engineering, database management, Git workflows, and measurable performance optimization. This repository evidences my ability to translate complex technical requirements into user-focused solutions while maintaining rigorous development standards and comprehensive documentation.
+
+*Links are provided throughout this document for easy reference to specific methodologies, case studies, and technical demonstrations.*
+
+## Applications
+* **HuggingFace Spaces**
+* **Virtual Studios Code**
+* **MySQL**
+* **Google Workspaces**
 
 ## Quick Links
 
