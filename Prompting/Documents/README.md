@@ -4,7 +4,7 @@ This segment of my technical portfolio contains written documentation exploring 
 ### Document Hot Links
 ---
 **Links to documents contained here**<br>
-- **[Prompting For RAG](Prompting_For_RAG)**<br>
+- **[Prompting For RAG](./Prompting_For_RAG)**<br>
 
 ### Good Reads
 ---
