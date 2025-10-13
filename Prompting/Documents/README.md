@@ -10,6 +10,9 @@ This segment of my technical portfolio contains written documentation exploring 
 ---
 **Links to external resources I find educational**
 
+#### Prompting
+- [https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies)<br>*Google | Generative AI on Vertex AI*
+
 #### RAG Prompt Templating
  - [The Art and Science of RAG: Mastering Prompt Templates and Contextual Understanding](https://medium.com/@ajayverma23/the-art-and-science-of-rag-mastering-prompt-templates-and-contextual-understanding-a47961a57e27) <br>*Article | Ajay Verma - Medium*
 
