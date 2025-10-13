@@ -2,9 +2,9 @@
 
 ## Quick Overview
 
-This portfolio demonstrates my comprehensive AI development expertise spanning the complete software development lifecycle—from user story definition through deployment and iterative optimization. My work showcases systematic, sprint-based methodologies with integrated evaluation and quality assurance, delivering production-ready AI systems using LangChain/LangGraph, full-stack development, and advanced ML techniques. 
+This portfolio demonstrates my comprehensive AI development expertise spanning the complete software development lifecycle—from user story definition through deployment and iterative optimization. My work showcases systematic, sprint-based methodologies with integrated evaluation and quality assurance, delivering production-ready AI systems using multi-agent architectures, full-stack development, and advanced ML techniques. 
 
-Featured is an extensive case study following the development of Mimir, a deployed AI educational assistant, demonstrating end-to-end capabilities in AI engineering, database management, Git workflows, and measurable performance optimization. This repository evidences my ability to translate complex technical requirements into user-focused solutions while maintaining rigorous development standards and comprehensive documentation.
+Featured is an extensive case study following the development and architectural evolution of Mimir, a deployed AI educational assistant, demonstrating end-to-end capabilities in AI engineering, agent-based system design, database management, Git workflows, and measurable performance optimization through strategic refactoring. This repository evidences my ability to translate complex technical requirements into user-focused solutions, identify and resolve architectural technical debt, and maintain rigorous development standards with comprehensive documentation throughout iterative system redesigns.
 
 *Links are provided throughout this document for easy reference to specific methodologies, case studies, and technical demonstrations.*
 
@@ -34,9 +34,9 @@ Here I provide a thorough overview of my methodology, priorities, and tool usage
 
   * You may also be interested in viewing development documentation for **Mimir.** **[Here](CaseStudy_Mimir/Issue_ProblemSolvingCaseStudy)** you can explore ongoing case studies documenting challenges, solutions, and iterative improvements throughout the application's development process.
 
-* **[Example Prompts](./resources/prompt-libraries.md)**
-  
-This continually updated document contains example system prompts with detailed explanations of the patterns, strategies, and goals they are designed to achieve. Includes analysis of foundation model compatibility and content strategy considerations.
+* **[RAG Prompting: System Prompt Design](https://github.com/Jdesiree112/Technical_Portfolio/blob/main/Prompting/Documents/Prompting_For_RAG.md)**
+
+This technical guide provides comprehensive documentation of my systematic approach to designing RAG (Retrieval-Augmented Generation) system prompts. It covers foundational prerequisites including context data structure analysis and context window allocation strategies, followed by detailed examination of the eight-component prompt anatomy—from task definition and intent interpretation through formatting and closing instructions. The document demonstrates my understanding of both static and dynamic prompting approaches, including when to apply each based on application scope and complexity. Discusses popular frameworks (LangChain, LlamaIndex, Haystack) and their token control methods, token budget management strategies, and implementation of advanced prompting techniques such as Chain-of-Thought, Tree-of-Thought, and multi-hop reasoning. Emphasizes an iterative, test-driven methodology for prompt optimization.
 
 ---
 
@@ -50,20 +50,39 @@ May 2019 - Oct 2021
 
 *Grade: 3.3*
 
+## Learning Philosophy
+
+Working in AI requires a commitment to lifelong learning. I actively pursue continuous education to refine my understanding and stay current with rapidly evolving technology. This philosophy is reflected in my strategic selection of both career-focused specializations and project-specific courses, ensuring my skills remain aligned with industry advancement and practical application needs.
+
 **Notable Certifications**
-* Python
+* Python (Intermediate)
 * SQL
 * HTML, CSS
 
-**Recently Completed**
-* **LangChain and RAG Implementation**
-  * IBM | Coursera
-* **Prompt Engineering Fundamentals**
-  * Google | Coursera
+**Recently Completed (2025)**
+* **Fundamentals of AI Agents Using RAG and LangChain**
+  * IBM | Coursera | Sep 2025
+  * Skills: RAG, LangChain, Prompt Engineering, Machine Learning, AI
+* **Design Prompts for Everyday Work Tasks**
+  * Google | Coursera | Aug 2025
+  * Skills: Prompting Patterns, Technical Writing, Cross-functional Collaboration
+* **Start Writing Prompts like a Pro**
+  * Google | Coursera | Aug 2025
+* **Introduction to LLM**
+  * Sololearn | Jul 2025
+  * Skills: A/B Testing, AI Training, Generative AI Tools
 
 **In Progress**
-* **Advanced AI Engineering**
-  * IBM | Coursera
+* **AI and Machine Learning Essentials with Python Specialization**
+  * Penn State University
+* **IBM AI Engineering Specialization**
+  * IBM
+* **IBM RAG and Agentic AI**
+  * IBM
+* **AI for Marketing Specialization**
+  * AI Business School
+* **Generative AI for Growth Marketing Specialization**
+  * Starweaver & IBM
 
 ## Technical Skills
 
@@ -74,11 +93,14 @@ May 2019 - Oct 2021
 * SQL
 
 ### AI/ML Frameworks & Tools
-* LangChain AI orchestration, tool binding, and prompt templates
-* Hugging Face Transformers
+* Multi-agent orchestration and routing systems
+* LangChain integration for message handling and core components
+* Hugging Face Transformers (including GGUF model deployment)
+* Model fine-tuning and adapter integration (PEFT)
 * OpenAI API integration
-* Gradio
+* Gradio for web-based AI interfaces
 * Streamlit
+* State management systems for AI applications
 
 ### Development & Deployment
 * Git/GitHub
@@ -109,12 +131,14 @@ May 2019 - Oct 2021
 - User research and pain point analysis
 
 **Prompt Design & Architecture**
-- LangChain orchestration for complex AI workflows
+- Agent-based routing systems for context-aware prompt composition
+- Modular prompt library architecture with state management
 - Structured prompting frameworks and context optimization
-- Chain-of-thought implementation and multi-turn conversation design
+- Chain-of-Thought and Tree-of-Thought implementation for preprocessing agents
+- Multi-turn conversation design with persistent state tracking
 - Pattern recognition and strategic technique selection
 - Brand-aligned prompt development for enterprise applications
-- LangChain prompt templates tailored for targeted behavior and utility-based functions
+- Dynamic prompt segment activation based on conversation context and user needs
 
 **UI/UX Design & Implementation**
 - User interface design for AI applications
@@ -138,10 +162,13 @@ May 2019 - Oct 2021
 
 **Educational Technology & AI Tutoring Systems**
 - Educational AI system design with academic integrity preservation
+- Multi-agent architecture for educational routing and decision-making
+- Sophisticated thinking agent preprocessing for complex reasoning tasks (Tree-of-Thought for mathematics, Chain-of-Thought for general reasoning)
 - Tool integration for enhanced learning experiences (graph generation, LaTeX implementation)
-- Iterative improvement cycles through systematic evaluation and testing
+- Iterative improvement cycles through systematic evaluation, architectural redesign, and testing
 - Problem-solving approach prioritizing capability enhancement over restrictive measures
 - Multi-modal educational content delivery and assessment
+- State management systems for conversation continuity and prompt composition tracking
 
 **Cross-Departmental Communication**
 - Multidisciplinary expertise enabling effective communication across technical, creative, and business teams
@@ -152,9 +179,9 @@ May 2019 - Oct 2021
 
 **Research Methodology**: Comprehensive approach combining stakeholder feedback analysis, user research, and technical investigation to inform content strategy and prompt design decisions.
 
-**Content Strategy Integration**: Brand voice development through systematic analysis of existing assets, stakeholder requirements, and target audience needs, implemented via LangChain prompt templates.
+**Content Strategy Integration**: Brand voice development through systematic analysis of existing assets, stakeholder requirements, and target audience needs, implemented via modular prompt libraries and state-managed composition systems.
 
-**AI Orchestration**: Advanced workflow design using LangChain for complex multi-step processes, brand voice consistency, and targeted behavioral outcomes.
+**AI Orchestration**: Advanced workflow design using multi-agent architectures for complex decision-making processes, prompt state management, and targeted behavioral outcomes. Experience with agent-based routing systems, thinking agent preprocessing, and modular prompt composition for deterministic, auditable AI workflows.
 
 **Evaluation Framework**: Multi-layered testing encompassing technical performance metrics, content quality assessment, and brand alignment verification.
 
@@ -162,11 +189,22 @@ May 2019 - Oct 2021
 
 ## Portfolio Highlights
 
-**[Mimir](https://huggingface.co/spaces/jdesiree/Mimir)**: Educational AI assistant deployed on HuggingFace Spaces, demonstrating end-to-end development from user research through deployment. Features custom web-based chatbot interface, LangChain orchestration, brand voice implementation, performance monitoring, and integrated graph-generating tool. Showcases an innovative problem-solving approach where technical capabilities were enhanced rather than implementing restrictive measures to address model dishonesty issues, resulting in improved educational functionality through data visualization integration.
+**[Mimir](https://huggingface.co/spaces/jdesiree/Mimir)**: Educational AI assistant deployed on HuggingFace Spaces, demonstrating end-to-end development from user research through iterative architectural refinement. Recently underwent a comprehensive redesign from ML-based classification to a sophisticated multi-agent orchestration system, addressing technical debt and scalability limitations while improving maintainability and decision transparency. 
 
-**Content Evaluation Systems**: Systematic frameworks for assessing AI-generated content quality, including A/B testing methodologies and training data curation using LangChain prompt templates.
+The current architecture features:
+- **Agent-Based Orchestration**: Four specialized routing agents (Mistral-Small-24B) for deterministic, auditable decision-making, replacing the previous ML classifier
+- **Multi-Model Thinking System**: Dedicated preprocessing agents using GGUF Mistral for mathematical reasoning (Tree-of-Thought) and standard Mistral for general reasoning (Chain-of-Thought)
+- **Fine-Tuned Response Generation**: Custom Phi-3.5 model trained on educational interactions with fallback to base model
+- **Modular Prompt Architecture**: Granular prompt library with state management system enabling dynamic composition based on conversation context
+- **Persistent State Management**: Thread-safe global state with SQLite + HuggingFace dataset backup, ensuring conversation continuity across sessions
 
-**Brand Voice Integration**: Demonstrated ability to translate organizational identity into AI conversation design through stakeholder collaboration, existing asset analysis, and LangChain prompt template customization.
+Demonstrates an innovative problem-solving approach that prioritizes capability enhancement over restriction - when faced with model limitations, the system was redesigned with enhanced reasoning capabilities and data visualization integration rather than implementing restrictive measures. This architectural evolution showcases the ability to identify technical debt, evaluate solution trade-offs, and execute complex refactoring while maintaining production deployment.
+
+*Note: RAG was removed from the architecture due to hardware constraints, with computational resources reallocated to support the multi-agent system and thinking model infrastructure.*
+
+**Content Evaluation Systems**: Systematic frameworks for assessing AI-generated content quality, including A/B testing methodologies, training data curation for model fine-tuning, and agent-based decision validation.
+
+**Agent-Based Architecture**: Demonstrated ability to design and implement sophisticated multi-agent systems for educational AI, including specialized routing agents for decision-making, thinking agents for complex reasoning preprocessing, and state management for dynamic prompt composition.
 
 ## Professional Standards
 
@@ -181,10 +219,11 @@ May 2019 - Oct 2021
 
 ## Contact Me
 
-Feel free to contact me to inquire about my services over LinkedIn or through Upwork for short-term contracts. I am open to a long-term role, which you may contact me to discuss through my LinkedIn profile. Thank you for taking the time to review my portfolio.
+Feel free to contact me to inquire about my services over LinkedIn or through Upwork for short-term contracts. I am open to a long-term role, which you may contact me to discuss through my LinkedIn profile. You can also explore my prompt engineering work and purchase custom prompts on PromptBase. Thank you for taking the time to review my portfolio.
 
-**[LinkedIn](www.linkedin.com/in/jasminbowman)**
-**[Upwork](https://www.upwork.com/freelancers/~016d86e0cbb9fa9c82?mp_source=share)**
+**[LinkedIn](www.linkedin.com/in/jasminbowman)**<br>
+**[Upwork](https://www.upwork.com/freelancers/~016d86e0cbb9fa9c82?mp_source=share)**<br>
+**[PromptBase](https://promptbase.com/profile/jasminbowman)**<br>
 
 ---
 
