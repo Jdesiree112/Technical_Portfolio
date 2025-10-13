@@ -4,7 +4,7 @@ This segment of my technical portfolio contains written documentation exploring 
 ### Document Hot Links
 ---
 **Links to documents contained here**<br>
-- **[./Prompting_For_RAG](https://github.com/Jdesiree112/Technical_Portfolio/blob/main/Prompting/Documents/README.md))**<br>
+- **[Prompting For RAG](https://github.com/Jdesiree112/Technical_Portfolio/blob/main/Prompting/Documents/Prompting_For_RAG.md)**<br>
 
 ### Good Reads
 ---
