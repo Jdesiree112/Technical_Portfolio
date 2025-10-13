@@ -1,13 +1,13 @@
 ## Prompting Documents
 This segment of my technical portfolio contains written documentation exploring prompting techniques, design processes, and applications. I write these to help new and experienced Prompt Engineers 
 
-### Document Hot Links
 ---
+### Document Hot Links
 **Links to my published documents contained here**<br>
 - **[Prompting For RAG](https://github.com/Jdesiree112/Technical_Portfolio/blob/main/Prompting/Documents/Prompting_For_RAG.md)**<br>
 
-### Good Reads
 ---
+### Good Reads
 **Links to external resources I find educational**
 
 #### Prompting
