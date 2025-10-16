@@ -225,6 +225,27 @@ Feel free to contact me to inquire about my services over LinkedIn or through Up
 **[Upwork](https://www.upwork.com/freelancers/~016d86e0cbb9fa9c82?mp_source=share)**<br>
 **[PromptBase](https://promptbase.com/profile/jasminbowman)**<br>
 
+## Mimir
+## Support & Resources
+
+### HuggingFace Docs
+- [Spaces Overview](https://huggingface.co/docs/hub/spaces)
+- [ZeroGPU Guide](https://huggingface.co/docs/hub/spaces-zerogpu)
+- [Gradio on Spaces](https://huggingface.co/docs/hub/spaces-sdks-gradio)
+
+### Mimir Resources
+- [Space URL](https://huggingface.co/spaces/jdesiree/Mimir)
+- [Model Repo](https://huggingface.co/jdesiree/Mimir-Phi-3.5)
+- [Analytics Dataset](https://huggingface.co/datasets/jdesiree/mimir_analytics)
+- [Case Study](https://github.com/Jdesiree112/Technical_Portfolio/tree/main/CaseStudy_Mimir)
+- [Corresponding API Reference](https://github.com/Jdesiree112/Technical_Portfolio/tree/main/CaseStudy_Mimir/API_Docs)
+
+### Contact
+- Space discussions: Comment on the [Space page](https://huggingface.co/spaces/jdesiree/Mimir/discussions/new)
+- Issues: [GitHub Issues](https://github.com/Jdesiree112/Technical_Portfolio/tree/main/CaseStudy_Mimir/Issue_ProblemSolvingCaseStudy)
+- Email: jdesiree112@gmail.com
+```
+
 ---
 
 *AI prompt engineering with integrated content strategy, brand voice development, and user-centered design for enterprise applications.*
