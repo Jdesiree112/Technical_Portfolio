@@ -516,3 +516,12 @@ library_state = {key: False for key in library_state.keys()}
 
 This order ensures proper dependency resolution and maintains clear separation of concerns while leveraging the previously existing global state infrastructure. Many methods, such as post-processing and streaming, are retained.
 
+## Revist
+The above portion of this Issue/Solutions documentation is comprised of planning. Some adjustments have been made since the first iteration of this objective. To wrap up this documentation, I am appending charts outlining the architecture of the final implementation and establishing the prompt evaluation methodology for the agentic and response models.
+
+### Architecture
+
+
+### Evaluation Methodology
+As with any AI prompt engineering project, the effectiveness of the prompts will need to be maintained and iterated. Provided that the only model presenting its generated response to the UI is the response model (Phi3-Mimir), I am opting to collect the outputs of all models in log form for review and evaluation, as well as construct evaluation scripts for each that check the outputs. The agents and logic are highly interdependent, where an error in the early stages will have a cascading effect. For this reason, it is vital that the system as a whole, as well as at a unit level, is tested.
+
