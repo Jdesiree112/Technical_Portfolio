@@ -658,12 +658,12 @@ Typical turn processing time: **25-40 seconds**
 
 ---
 
-## Changes from v1.0 to v2.0
+## Changes from v1.2 to v2.0
 
 ### Major Architectural Changes
 
 #### 1. Multi-Agent System
-**v1.0**: Single-model architecture with ML classifier
+**v1.2**: Single-model architecture with ML classifier
 ```python
 # Old approach
 model.generate(prompt)
@@ -684,7 +684,7 @@ tool_decision → routing_agents (4x) → thinking_agents (3x) → response_agen
 
 #### 2. State Management
 
-**v1.0**: Simple conversation list
+**v1.2**: Simple conversation list
 ```python
 conversation_history = [...]
 ```
@@ -705,7 +705,7 @@ conversation_state = [...]    # Agent context
 
 #### 3. Prompt System
 
-**v1.0**: Static prompt templates
+**v1.2**: Static prompt templates
 - Single system prompt per mode
 
 **v2.0**: Dynamic prompt assembly
@@ -722,7 +722,7 @@ conversation_state = [...]    # Agent context
 
 #### 4. Model Loading
 
-**v1.0**: Single model loaded at startup
+**v1.2**: Single model loaded at startup
 
 **v2.0**: Three-stage loading
 1. Build time: `preload_from_hub` downloads models
@@ -755,22 +755,22 @@ conversation_state = [...]    # Agent context
 #### Modified Endpoints
 
 **`/add_user_message`**
-- **v1.0**: `(message, chat_history) → (str, list)`
+- **v1.2**: `(message, chat_history) → (str, list)`
 - **v2.0**: `(message, chat_history, conversation_state) → (str, list, list)`
 - **Change**: Added `conversation_state` parameter and return value
 
 **`/generate_response`**
-- **v1.0**: `(chat_history) → list`
+- **v1.2**: `(chat_history) → list`
 - **v2.0**: `(chat_history, conversation_state) → (list, list)`
 - **Change**: Added `conversation_state` parameter and return value
 
 **`/add_loading_animation`**
-- **v1.0**: `(chat_history) → list`
+- **v1.2**: `(chat_history) → list`
 - **v2.0**: `(chat_history, conversation_state) → (list, list)`
 - **Change**: Added `conversation_state` (passthrough only)
 
 **`/reset_conversation`**
-- **v1.0**: `() → list`
+- **v1.2**: `() → list`
 - **v2.0**: `() → (list, list)`
 - **Change**: Now returns both chat_history and conversation_state
 
@@ -784,7 +784,7 @@ conversation_state = [...]    # Agent context
 
 ### Performance Impact
 
-| Metric | v1.0 | v2.0 | Change |
+| Metric | v1.2 | v2.0 | Change |
 |--------|------|------|--------|
 | Avg Response Time | 10-15s | 25-40s | +15-25s |
 | First Call (Cold) | 12-18s | 35-50s | +23-32s |
@@ -796,9 +796,9 @@ conversation_state = [...]    # Agent context
 
 ### Migration Guide
 
-#### Updating v1.0 Code to v2.0
+#### Updating v1.2 Code to v2.0
 
-**Before (v1.0)**:
+**Before (v1.2)**:
 ```python
 # Add user message
 _, chat_history = client.predict(
@@ -835,7 +835,7 @@ chat_history, conversation_state = client.predict(  # NEW return value
 #### State Management Migration
 
 ```python
-# v1.0 state tracking
+# v1.2 state tracking
 chat_history = []
 
 # v2.0 state tracking
@@ -852,7 +852,7 @@ conversation_state = []    # For agent context
 **Breaking Changes**:
 - All endpoints now require `conversation_state` parameter
 - Return values changed from single list to tuple of lists
-- Old v1.0 code will **fail** with TypeError
+- Old v1.2 code will **fail** with TypeError
 
 **No Changes**:
 - Endpoint names remain the same
