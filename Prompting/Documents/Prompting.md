@@ -5,8 +5,6 @@ The difficulty with this is the fact that AI models initially perform better as 
 
 This goal can be met through the utilization of known and newly discovered prompting patterns and strategies, which is what I will discuss below.
 
-Here's the content grouped by technique type:
-
 ## Content
 This document covers prompting techniques, patterns, and strategies as well as some use cases. Examples covered:
 
@@ -86,7 +84,7 @@ Reflection processing is when you ask a model to reflect on its own response, an
 
 - **[Meta](https://www.promptingguide.ai/techniques/meta-prompting)**
 Meta-prompting is a prompt engineering technique where a prompt is used to generate, refine, or interpret another prompt. This can be thought of as prompting to generate a prompt, focusing on structure and form rather than content. This is often used to refine prompts for a specific task or domain.
-  - This strategy is useful for workflow optimization or reordering content in a prompt you wrote. For example, let's say you have a base prompt for integration into a customer service agent, and you want the content in the prompt to be structured so that dependencies feed into one another in a more logical way. Perhaps you should have an analysis of the user query before proceeding through the process of generating a response. You would include the prompt along with structuring guidance. This can also be used to optimize user prompts in a workflow, preprocessing the prompt so that it is structured effectively before being passed to the model or a RAG pipeline.
+  - This strategy is useful for workflow optimization or reordering content in a prompt you wrote. For example, let's say you have a base prompt for integration into a customer service agent, and you want the content in the prompt to be structured so that dependencies feed into one another in a more logical way. Maybe you should have an analysis of the user query before you begin the process of generating a response. You would be able to include the prompt along with structuring guidance. This can also be used to optimize user prompts in a workflow, preprocessing the prompt so that it is structured effectively before being passed to the model or a RAG pipeline.
   - This is not necessary for simple tasks.
 
 **In Progress**
