@@ -8,7 +8,7 @@ The existing ML classification approach, while initially effective, has accumula
 
 To address these architectural constraints, the system is undergoing a fundamental redesign that replaces the ML classification tree with a sophisticated agentic workflow. This new architecture delegates prompt selection and task management to specialized lightweight agents, each handling specific aspects of the educational interaction process. Concurrently, the prompt library has been extracted into a dedicated `prompt_library.py` module with granular, purpose-specific prompt segments.
 
-The agentic workflow approach provides deterministic, auditable decision-making while eliminating the maintenance overhead, retraining cycles, and technical debt associated with the previous ML classification system. This refactoring significantly improves code organization, facilitates rapid prompt iteration, and enables scalable system expansion without the complexity of managing ML model lifecycles.
+The agentic workflow approach provides deterministic, auditable decision-making while eliminating the maintenance overhead, retraining cycles, and technical debt associated with the previous ML classification system. This refactoring significantly improves code organization, facilitates rapid, prompt iteration, and enables scalable system expansion without the complexity of managing ML model lifecycles.
 
 The new architecture combines lightweight decision agents with a sophisticated thinking agent utilizing a custom-trained Phi3 model for complex reasoning preprocessing, creating a more maintainable, transparent, and capable educational AI system.
 
@@ -520,7 +520,7 @@ This order ensures proper dependency resolution and maintains clear separation o
 The above portion of this Issue/Solutions documentation is comprised of planning. Some adjustments have been made since the first iteration of this objective. To wrap up this documentation, I am appending charts outlining the architecture of the final implementation and establishing the prompt evaluation methodology for the agentic and response models.
 
 ### Architecture
-
+The corresponding architecture overview can be found [here](https://github.com/Jdesiree112/Technical_Portfolio/blob/main/CaseStudy_Mimir/Technical_Architecture/ARCHITECTURE_OVERVIEW_V.2.md).
 
 ### Evaluation Methodology
 As with any AI prompt engineering project, the effectiveness of the prompts will need to be maintained and iterated. Provided that the only model presenting its generated response to the UI is the response model (Phi3-Mimir), I am opting to collect the outputs of all models in log form for review and evaluation, as well as construct evaluation scripts for each that check the outputs. The agents and logic are highly interdependent, where an error in the early stages will have a cascading effect. For this reason, it is vital that the system as a whole, as well as at a unit level, is tested.
