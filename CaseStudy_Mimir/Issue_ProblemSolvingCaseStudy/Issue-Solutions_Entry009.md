@@ -525,3 +525,7 @@ The corresponding architecture overview can be found [here](https://github.com/J
 ### Evaluation Methodology
 As with any AI prompt engineering project, the effectiveness of the prompts will need to be maintained and iterated. Provided that the only model presenting its generated response to the UI is the response model (Phi3-Mimir), I am opting to collect the outputs of all models in log form for review and evaluation, as well as construct evaluation scripts for each that check the outputs. The agents and logic are highly interdependent, where an error in the early stages will have a cascading effect. For this reason, it is vital that the system as a whole, as well as at a unit level, is tested.
 
+## Follow-up Documents
+As is anticipated during a dramatic adjustment such as this, where most of the original architecture was removed or replaced completely, there have been other issues not discussed here. In the interest of preserving readability and limiting verbosity, I have opted to write separate documents covering issues encountered in the implementation of changes.
+
+1. [Maxed Memory](https://github.com/Jdesiree112/Technical_Portfolio/edit/main/CaseStudy_Mimir/Issue_ProblemSolvingCaseStudy/Issue-Solutions_Entry010.md)
