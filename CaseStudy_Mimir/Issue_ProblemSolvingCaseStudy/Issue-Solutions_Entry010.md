@@ -10,6 +10,7 @@ The base model used by Mimir's fine-tuned response model was originally compiled
 
 ### GPU Memory Logging and Sequential Model Loading
 Logging has been added to `agents.py`, combining a log_memory() + nvidia-smi approach, to track GPU usage per step. Additionally, model loading has been set to proceed sequentially, negating potential issues with GPU VRAM being maxed out by too many calls at once.
+Corresponds to [commitment 7417fd2e2d5b5a9297c7dacd250fdd4715dcec98](https://huggingface.co/spaces/jdesiree/Mimir/commit/7417fd2e2d5b5a9297c7dacd250fdd4715dcec98)
 
 ### Monitoring
 A new analytics tab was added to the trackio page of Mimir's application, specifically to view the cache size of the application. 
