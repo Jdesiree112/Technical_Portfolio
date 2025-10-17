@@ -1,34 +1,34 @@
 # Mimir Educational AI Assistant - Architecture Overview
 ## System Architecture
 
-┌─────────────────────────────────────────────────────────────────┐
-│                         Gradio Interface                        │
-│                  (Chatbot + Analytics Pages)                    │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-┌────────────────────▼────────────────────────────────────────────┐
-│                    Main Orchestrator (app.py)                   │
-│  • Turn management                                              │
-│  • Prompt state reset                                           │
-│  • Metrics tracking                                             │
-└─┬──────────────┬──────────────┬──────────────┬──────────────────┘
-  │              │              │              │
-  │              │              │              │
-┌─▼──────────┐ ┌─▼──────────┐ ┌─▼──────────┐ ┌─▼──────────────────┐
-│   Tool     │ │  Routing   │ │ Thinking   │ │    Response        │
-│ Decision   │ │  Agents    │ │  Agents    │ │    Agent           │
-│  Agent     │ │  (4 agents)│ │ (3 agents) │ │   (Phi-3)          │
-└────────────┘ └────────────┘ └────────────┘ └────────────────────┘
-     │              │              │              │
-     │              │              │              │
-┌────▼──────────────▼──────────────▼──────────────▼───────────────┐
-│                   Global State Manager                          │
-│  • Conversation state                                           │
-│  • Prompt state (per-turn)                                      │
-│  • Analytics cache                                              │
-│  • Evaluation metrics                                           │
-│  • SQLite + HF Dataset persistence                              │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐<br>
+│                         Gradio Interface                        │<br>
+│                  (Chatbot + Analytics Pages)                    │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+┌────────────────────▼────────────────────────────────────────────┐<br>
+│                    Main Orchestrator (app.py)                   │<br>
+│  • Turn management                                              │<br>
+│  • Prompt state reset                                           │<br>
+│  • Metrics tracking                                             │<br>
+└─┬──────────────┬──────────────┬──────────────┬──────────────────┘<br>
+  │              │              │              │<br>
+  │              │              │              │<br>
+┌─▼──────────┐ ┌─▼──────────┐ ┌─▼──────────┐ ┌─▼──────────────────┐<br>
+│   Tool     │ │  Routing   │ │ Thinking   │ │    Response        │<br>
+│ Decision   │ │  Agents    │ │  Agents    │ │    Agent           │<br>
+│  Agent     │ │  (4 agents)│ │ (3 agents) │ │   (Phi-3)          │<br>
+└────────────┘ └────────────┘ └────────────┘ └────────────────────┘<br>
+     │              │              │              │<br>
+     │              │              │              │<br>
+┌────▼──────────────▼──────────────▼──────────────▼───────────────┐<br>
+│                   Global State Manager                          │<br>
+│  • Conversation state                                           │<br>
+│  • Prompt state (per-turn)                                      │<br>
+│  • Analytics cache                                              │<br>
+│  • Evaluation metrics                                           │<br>
+│  • SQLite + HF Dataset persistence                              │<br>
+└─────────────────────────────────────────────────────────────────┘<br>
 
 ## Core Components
 
@@ -77,48 +77,48 @@ Mimir uses a multi-agent architecture with 4 distinct agent types, each with spe
 
 ## Agent Hierarchy
 
-┌─────────────────────────────────────────────────────────┐
-│                    User Input                           │
-└────────────────────┬────────────────────────────────────┘
-                     │
-            ┌────────▼─────────┐
-            │  Tool Decision   │  (Mistral-Small-24B)
-            │     Agent        │  - Determines visualization needs
-            └────────┬─────────┘
-                     │
-            ┌────────▼─────────┐
-            │  Routing Agents  │  (Mistral-Small-24B, shared)
-            │   • Agent 1      │  - Practice questions
-            │   • Agent 2      │  - Discovery mode
-            │   • Agent 3      │  - Follow-up assessment
-            │   • Agent 4      │  - Teaching mode
-            └────────┬─────────┘
-                     │
-            ┌────────▼─────────┐
-            │ Thinking Agent   │  (Mistral + GGUF)
-            │  • Math          │  - GGUF Mistral (Tree-of-Thought)
-            │  • QA Design     │  - Standard Mistral (CoT)
-            │  • Reasoning     │  - Standard Mistral (CoT)
-            └────────┬─────────┘
-                     │
-            ┌────────▼─────────┐
-            │ Response Agent   │  (Phi-3 Fine-tuned + Base fallback)
-            │                  │  - Final response generation
-            └──────────────────┘
+┌─────────────────────────────────────────────────────────┐<br>
+│                    User Input                           │<br>
+└────────────────────┬────────────────────────────────────┘<br>
+                     │<br>
+            ┌────────▼─────────┐<br>
+            │  Tool Decision   │  (Mistral-Small-24B)<br>
+            │     Agent        │  - Determines visualization needs<br>
+            └────────┬─────────┘<br>
+                     │<br>
+            ┌────────▼─────────┐<br>
+            │  Routing Agents  │  (Mistral-Small-24B, shared)<br>
+            │   • Agent 1      │  - Practice questions<br>
+            │   • Agent 2      │  - Discovery mode<br>
+            │   • Agent 3      │  - Follow-up assessment<br>
+            │   • Agent 4      │  - Teaching mode<br>
+            └────────┬─────────┘<br>
+                     │<br>
+            ┌────────▼─────────┐<br>
+            │ Thinking Agent   │  (Mistral + GGUF)<br>
+            │  • Math          │  - GGUF Mistral (Tree-of-Thought)<br>
+            │  • QA Design     │  - Standard Mistral (CoT)<br>
+            │  • Reasoning     │  - Standard Mistral (CoT)<br>
+            └────────┬─────────┘<br>
+                     │<br>
+            ┌────────▼─────────┐<br>
+            │ Response Agent   │  (Phi-3 Fine-tuned + Base fallback)<br>
+            │                  │  - Final response generation<br>
+            └──────────────────┘<br>
 ## Agent Details
 
 1. ToolDecisionAgent
 
-**Purpose**: Determine if visualization tools are needed
+**Purpose**: Determine if visualization tools are needed<br>
 
-**Model**: Mistral-Small-24B (24B parameters)
+**Model**: Mistral-Small-24B (24B parameters)<br>
 - 4-bit quantization
 - Lazy loading
 - ZeroGPU: 60s allocation
 
-**System Prompt**: `TOOL_DECISION`
+**System Prompt**: `TOOL_DECISION`<br>
 
-**Output**: Boolean (True/False)
+**Output**: Boolean (True/False)<br>
 
 **Decision Criteria**:
 - Mathematical functions or relationships
@@ -130,9 +130,9 @@ Mimir uses a multi-agent architecture with 4 distinct agent types, each with spe
 
 2. PromptRoutingAgents
 
-**Purpose**: Four specialized decision agents for prompt library activation
-**Model**: Shared Mistral-Small-24B instance
-**Agents**:
+**Purpose**: Four specialized decision agents for prompt library activation<br>
+**Model**: Shared Mistral-Small-24B instance<br>
+**Agents**:<br>
 
 #### Agent 1: Practice Questions
 - **System Prompt**: `agent_1_system`
@@ -187,10 +187,10 @@ Mimir uses a multi-agent architecture with 4 distinct agent types, each with spe
 ---
 
 ### 4. ResponseAgent
+<br>
+**Purpose**: Final educational response generation<br>
 
-**Purpose**: Final educational response generation
-
-**Model**: Phi-3-mini-4k-instruct
+**Model**: Phi-3-mini-4k-instruct<br>
 - **Primary**: Fine-tuned (`jdesiree/Mimir-Phi-3.5`)
 - **Fallback**: Base Microsoft model
 - 4-bit quantization
@@ -235,8 +235,8 @@ preload_from_hub:
 ---
 
 ## Message Format
-
-All agents use the LangChain message format:
+<br>
+All agents use the LangChain message format:<br>
 
 ```python
 from langchain_core.messages import SystemMessage, HumanMessage
@@ -248,8 +248,9 @@ messages = [
 ```
 
 ## ZeroGPU Integration
+<br>
+Each agent is decorated with:<br>
 
-Each agent is decorated with:
 ```python
 @spaces.GPU(duration=60)  # Duration in seconds
 def agent_method(self, ...):
@@ -291,29 +292,29 @@ Mimir uses a dual-layer state management system:
 ## Architecture
 
 ```
-┌────────────────────────────────────────────────────────┐
-│           GlobalStateManager                           │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │  PromptStateManager (per-turn)                   │  │
-│  │  • Resets at the start of each turn              │  │
-│  │  • Tracks active prompts                         │  │
-│  └──────────────────────────────────────────────────┘  │
-│                                                        │
-│  Persistent State:                                     │
-│  • Conversation state (chat history)                   │
-│  • Analytics cache                                     │
-│  • ML model cache                                      │
-│  • Evaluation metrics                                  │
-│                                                        │
-│  Persistence Layer:                                    │
-│  • SQLite (fast local access)                          │
-│  • HF Dataset (backup & sync)                          │
-└────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────┐<br>
+│           GlobalStateManager                           │<br>
+│  ┌──────────────────────────────────────────────────┐  │<br>
+│  │  PromptStateManager (per-turn)                   │  │<br>
+│  │  • Resets at the start of each turn              │  │<br>
+│  │  • Tracks active prompts                         │  │<br>
+│  └──────────────────────────────────────────────────┘  │<br>
+│                                                        │<br>
+│  Persistent State:                                     │<br>
+│  • Conversation state (chat history)                   │<br>
+│  • Analytics cache                                     │<br>
+│  • ML model cache                                      │<br>
+│  • Evaluation metrics                                  │<br>
+│                                                        │<br>
+│  Persistence Layer:                                    │<br>
+│  • SQLite (fast local access)                          │<br>
+│  • HF Dataset (backup & sync)                          │<br>
+└────────────────────────────────────────────────────────┘<br>
 
 ## Prompt State Manager
 
 ### Purpose
-Manages which prompt segments are active for the current turn only.
+Manages which prompt segments are active for the current turn only.<br>
 
 ### State Dictionary
 ```python
@@ -375,7 +376,7 @@ Response generated
 ## Global State Manager
 
 ### Purpose
-Thread-safe persistence for all application state across sessions.
+Thread-safe persistence for all application state across sessions.<br>
 
 ### State Categories
 
@@ -570,23 +571,23 @@ CREATE TABLE evaluations (
 ## Complete Turn Flow
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                         USER INPUT                               │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 1: RESET PROMPT STATE                                       │
-│ global_state_manager.reset_prompt_state()                        │
-│ All prompt flags → False                                         │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 2: PROCESS USER INPUT                                       │
-│ • Get conversation history (last 8 messages)                     │
-│ • Format for agents                                              │
-└────────────────────┬────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐<br>
+│                         USER INPUT                              │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 1: RESET PROMPT STATE                                      │<br>
+│ global_state_manager.reset_prompt_state()                       │<br>
+│ All prompt flags → False                                        │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 2: PROCESS USER INPUT                                      │<br>
+│ • Get conversation history (last 8 messages)                    │<br>
+│ • Format for agents                                             │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────────┐
@@ -595,125 +596,125 @@ CREATE TABLE evaluations (
 │   ↓                                                              │
 │ if True: prompt_state.update("TOOL_USE_ENHANCEMENT", True)       │
 └────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 4: REGEX LOGICAL EXPRESSIONS                                │
-│ logical_expressions.apply_all_checks(user_input, prompt_state)   │
-│   ↓                                                              │
-│ • GENERAL_FORMATTING → Always True                               │
-│ • Math keywords detected → LATEX_FORMATTING = True               │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 5: SEQUENTIAL AGENT EXECUTION                               │
-│                                                                  │
-│ Agent 1: Practice Questions                                      │
-│   result = routing_agents.agent_1_practice_questions()           │
-│   if True: prompt_state.update("STRUCTURE_PRACTICE_QUESTIONS")  │
-│                                                                  │
-│ Agent 2: Discovery Mode                                          │
-│   result = routing_agents.agent_2_discovery_mode()               │
-│   if result: prompt_state.update(result, True)                  │
-│                                                                  │
-│ Agent 3: Follow-up Assessment                                    │
-│   result = routing_agents.agent_3_followup_assessment()          │
-│   if True: prompt_state.update("PRACTICE_QUESTION_FOLLOWUP")    │
-│                                                                  │
-│ Agent 4: Teaching Mode                                           │
-│   results = routing_agents.agent_4_teaching_mode()               │
-│   prompt_state.update_multiple(results)                         │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 6: THINKING AGENT PROCESSING                                │
-│                                                                  │
-│ Determine active thinking agents:                                │
-│ • LATEX_FORMATTING active? → MATH_THINKING                       │
-│ • STRUCTURE_PRACTICE_QUESTIONS? → QUESTION_ANSWER_DESIGN        │
-│ • TOOL/FOLLOWUP/TEACHING active? → REASONING_THINKING            │
-│                                                                  │
-│ Execute thinking agents:                                         │
-│   thinking_context = thinking_agents.process(                    │
-│       user_input, history, thinking_prompts,                     │
-│       tool_img_output, tool_context                              │
-│   )                                                              │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 7: RESPONSE PROMPT ASSEMBLY                                 │
-│                                                                  │
-│ response_prompts = prompt_state.get_active_response_prompts()    │
-│                                                                  │
-│ Build prompt segments:                                           │
-│ • CORE_IDENTITY (always)                                         │
-│ • For each active prompt: add from prompt_map                    │
-│                                                                  │
-│ prompt_segments_text = "\n\n".join(prompt_segments)              │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 8: FINAL PROMPT CONSTRUCTION                                │
-│                                                                  │
-│ complete_prompt = f"""                                           │
-│ {prompt_segments_text}                                           │
-│                                                                  │
-│ Tool context: {tool_img_output} {tool_context}                   │
-│ History: {recent_history_formatted}                              │
-│ Thinking context: {thinking_context}                             │
-│ User query: {user_input}                                         │
-│ Knowledge cutoff: {CURRENT_YEAR}                                 │
-│ """                                                              │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 9: RESPONSE GENERATION                                      │
-│ raw_response = response_agent.invoke(complete_prompt)            │
-│   ↓                                                              │
-│ Uses Phi-3 (fine-tuned or base fallback)                         │
-│ Max tokens: 350                                                  │
-│ Temperature: 0.7                                                 │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 10: POST-PROCESSING                                         │
-│ processed_response = post_processor.process_response()           │
-│   ↓                                                              │
-│ • Clean artifacts (<|end|>, ###, etc.)                           │
-│ • Intelligent truncation                                         │
-│ • Enhance readability                                            │
-│ • Quality validation                                             │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│ STEP 11: METRICS TRACKING                                        │
-│                                                                  │
-│ • Educational quality evaluation                                 │
-│ • Response quality scoring                                       │
-│ • Log to SQLite database                                         │
-│ • Update global state                                            │
-│                                                                  │
-│ metrics = {                                                      │
-│     "response_time": duration,                                   │
-│     "quality_score": score,                                      │
-│     "educational_score": ed_score,                               │
-│     "prompt_mode": active_prompts,                               │
-│     "tools_used": bool,                                          │
-│     "thinking_agents": list                                      │
-│ }                                                                │
-└────────────────────┬────────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    FINAL RESPONSE TO USER                        │
-└─────────────────────────────────────────────────────────────────┘
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 4: REGEX LOGICAL EXPRESSIONS                               │<br>
+│ logical_expressions.apply_all_checks(user_input, prompt_state)  │<br>
+│   ↓                                                             │<br>
+│ • GENERAL_FORMATTING → Always True                              │<br>
+│ • Math keywords detected → LATEX_FORMATTING = True              │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 5: SEQUENTIAL AGENT EXECUTION                              │<br>
+│                                                                 │<br>
+│ Agent 1: Practice Questions                                     │<br>
+│   result = routing_agents.agent_1_practice_questions()          │<br>
+│   if True: prompt_state.update("STRUCTURE_PRACTICE_QUESTIONS")  │<br>
+│                                                                 │<br>
+│ Agent 2: Discovery Mode                                         │<br>
+│   result = routing_agents.agent_2_discovery_mode()              │<br>
+│   if result: prompt_state.update(result, True)                  │<br>
+│                                                                 │<br>
+│ Agent 3: Follow-up Assessment                                   │<br>
+│   result = routing_agents.agent_3_followup_assessment()         │<br>
+│   if True: prompt_state.update("PRACTICE_QUESTION_FOLLOWUP")    │<br>
+│                                                                 │<br>
+│ Agent 4: Teaching Mode                                          │<br>
+│   results = routing_agents.agent_4_teaching_mode()              │<br>
+│   prompt_state.update_multiple(results)                         │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 6: THINKING AGENT PROCESSING                               │<br>
+│                                                                 │<br>
+│ Determine active thinking agents:                               │<br>
+│ • LATEX_FORMATTING active? → MATH_THINKING                      │<br>
+│ • STRUCTURE_PRACTICE_QUESTIONS? → QUESTION_ANSWER_DESIGN        │<br>
+│ • TOOL/FOLLOWUP/TEACHING active? → REASONING_THINKING           │<br>
+│                                                                 │<br>
+│ Execute thinking agents:                                        │<br>
+│   thinking_context = thinking_agents.process(                   │<br>
+│       user_input, history, thinking_prompts,                    │<br>
+│       tool_img_output, tool_context                             │<br>
+│   )                                                             │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 7: RESPONSE PROMPT ASSEMBLY                                │<br>
+│                                                                 │<br>
+│ response_prompts = prompt_state.get_active_response_prompts()   │<br>
+│                                                                 │<br>
+│ Build prompt segments:                                          │<br>
+│ • CORE_IDENTITY (always)                                        │<br>
+│ • For each active prompt: add from prompt_map                   │<br>
+│                                                                 │<br>
+│ prompt_segments_text = "\n\n".join(prompt_segments)             │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 8: FINAL PROMPT CONSTRUCTION                               │<br>
+│                                                                 │<br>
+│ complete_prompt = f"""                                          │<br>
+│ {prompt_segments_text}                                          │<br>
+│                                                                 │<br>
+│ Tool context: {tool_img_output} {tool_context}                  │<br>
+│ History: {recent_history_formatted}                             │<br>
+│ Thinking context: {thinking_context}                            │<br>
+│ User query: {user_input}                                        │<br>
+│ Knowledge cutoff: {CURRENT_YEAR}                                │<br>
+│ """                                                             │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 9: RESPONSE GENERATION                                     │<br>
+│ raw_response = response_agent.invoke(complete_prompt)           │<br>
+│   ↓                                                             │<br>
+│ Uses Phi-3 (fine-tuned or base fallback)                        │<br>
+│ Max tokens: 350                                                 │<br>
+│ Temperature: 0.7                                                │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 10: POST-PROCESSING                                        │<br>
+│ processed_response = post_processor.process_response()          │<br>
+│   ↓                                                             │<br>
+│ • Clean artifacts (<|end|>, ###, etc.)                          │<br>
+│ • Intelligent truncation                                        │<br>
+│ • Enhance readability                                           │<br>
+│ • Quality validation                                            │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│ STEP 11: METRICS TRACKING                                       │<br>
+│                                                                 │<br>
+│ • Educational quality evaluation                                │<br>
+│ • Response quality scoring                                      │<br>
+│ • Log to SQLite database                                        │<br>
+│ • Update global state                                           │<br>
+│                                                                 │<br>
+│ metrics = {                                                     │<br>
+│     "response_time": duration,                                  │<br>
+│     "quality_score": score,                                     │<br>
+│     "educational_score": ed_score,                              │<br>
+│     "prompt_mode": active_prompts,                              │<br>
+│     "tools_used": bool,                                         │<br>
+│     "thinking_agents": list                                     │<br>
+│ }                                                               │<br>
+└────────────────────┬────────────────────────────────────────────┘<br>
+                     │<br>
+                     ▼<br>
+┌─────────────────────────────────────────────────────────────────┐<br>
+│                    FINAL RESPONSE TO USER                       │<br>
+└─────────────────────────────────────────────────────────────────┘<br>
 ```
 
 ---
@@ -743,35 +744,37 @@ prompt_state.update("TOOL_USE_ENHANCEMENT", True)
 ### Step 5: Routing Agent Cascade
 
 ```
-Agent 1 (Practice Questions)
-    Input: user_input + recent_history (last 4 msgs)
-    System: agent_1_system
-    Output: Boolean
-    GPU: 50s
-    Decision: False (user wants graph, not practice)
-    ↓
-Agent 2 (Discovery Mode)
-    Input: user_input only
-    System: agent_2_system
-    Output: "VAUGE_INPUT" | "USER_UNDERSTANDING" | None
-    GPU: 50s
-    Decision: None (clear request for graph)
-    ↓
-Agent 3 (Follow-up Assessment)
-    Input: user_input + recent_history (last 4 msgs)
-    System: agent_3_system (formatted with STRUCTURE_PRACTICE_QUESTIONS)
-    Output: Boolean
-    GPU: 50s
-    Decision: False (not a follow-up)
-    ↓
-Agent 4 (Teaching Mode)
-    Input: user_input + recent_history (last 4 msgs)
-    System: agent_4_system
-    Output: Dict{"GUIDING_TEACHING": bool, "STRUCTURE_PRACTICE_QUESTIONS": bool}
-    GPU: 50s
-    Decision: {"GUIDING_TEACHING": True, "STRUCTURE_PRACTICE_QUESTIONS": False}
-    ↓
-prompt_state after routing:
+Agent 1 (Practice Questions)<br>
+    Input: user_input + recent_history (last 4 msgs)<br>
+    System: agent_1_system<br>
+    Output: Boolean<br>
+    GPU: 50s<br>
+    Decision: False (user wants graph, not practice)<br>
+    ↓<br>
+Agent 2 (Discovery Mode)<br>
+    Input: user_input only<br>
+    System: agent_2_system<br>
+    Output: "VAUGE_INPUT" | "USER_UNDERSTANDING" | None<br>
+    GPU: 50s<br>
+    Decision: None (clear request for graph)<br>
+    ↓<br>
+Agent 3 (Follow-up Assessment)<br>
+    Input: user_input + recent_history (last 4 msgs)<br>
+    System: agent_3_system (formatted with STRUCTURE_PRACTICE_QUESTIONS)<br>
+    Output: Boolean<br>
+    GPU: 50s<br>
+    Decision: False (not a follow-up)<br>
+    ↓<br>
+Agent 4 (Teaching Mode)<br>
+    Input: user_input + recent_history (last 4 msgs)<br>
+    System: agent_4_system<br>
+    Output: Dict{"GUIDING_TEACHING": bool, "STRUCTURE_PRACTICE_QUESTIONS": bool}<br>
+    GPU: 50s<br>
+    Decision: {"GUIDING_TEACHING": True, "STRUCTURE_PRACTICE_QUESTIONS": False}<br>
+    ↓<br>
+prompt_state after routing:<br>
+
+```
 {
     "GENERAL_FORMATTING": True,
     "TOOL_USE_ENHANCEMENT": True,
@@ -2567,9 +2570,10 @@ global_state_manager._backup_to_hf_dataset()
 - [Model Repo](https://huggingface.co/jdesiree/Mimir-Phi-3.5)
 - [Analytics Dataset](https://huggingface.co/datasets/jdesiree/mimir_analytics)
 - [Case Study](https://github.com/Jdesiree112/Technical_Portfolio/tree/main/CaseStudy_Mimir)
+- [Corresponding API Reference](https://github.com/Jdesiree112/Technical_Portfolio/tree/main/CaseStudy_Mimir/API_Docs)
 
 ### Contact
 - Space discussions: Comment on the [Space page](https://huggingface.co/spaces/jdesiree/Mimir/discussions/new)
-- Issues: [GitHub Issues](https://github.com/Jdesiree112/Technical_Portfolio/blob/main/CaseStudy_Mimir/Issue_ProblemSolvingCaseStudy)
+- Issues: [GitHub Issues](https://github.com/Jdesiree112/Technical_Portfolio/tree/main/CaseStudy_Mimir/Issue_ProblemSolvingCaseStudy)
 - Email: jdesiree112@gmail.com
 ```
