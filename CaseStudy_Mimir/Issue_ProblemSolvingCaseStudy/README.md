@@ -11,3 +11,5 @@ This collection of Issue-Solution Documents covers highlighted instances of prob
 6. [ML Classification Decision Tree](./Issue-Solutions_Entry006.md)
 7. [Fine Tuning Mimir-Phi3 Model](./Issue-Solutions_Entry007.md)
 8. [RAG Planning and Integration](./Issue-Solutions_Entry008.md)
+9. [Prompt Library Architecture Redesign](./Issue-Solutions_Entry009.md)
+10. [Memory Optimization](./Issue-Solutions_Entry010.md)
