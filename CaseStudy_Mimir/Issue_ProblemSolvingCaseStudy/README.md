@@ -13,3 +13,4 @@ This collection of Issue-Solution Documents covers highlighted instances of prob
 8. [RAG Planning and Integration](./Issue-Solutions_Entry008.md)
 9. [Prompt Library Architecture Redesign](./Issue-Solutions_Entry009.md)
 10. [Memory Optimization](./Issue-Solutions_Entry010.md)
+11. [Prompt Iteration](./Issue-Solutions_Entry011.md)
