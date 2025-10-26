@@ -4,3 +4,6 @@ Critical to any AI project, prompt iteration is the process of refining prompts 
 
 ### Library Versions
 1. [v2.0 Prompt Library](https://github.com/Jdesiree112/Technical_Portfolio/blob/main/Prompting/Documents/Prompt_Iteration_Mimir-Examples/Prompt_Library_v2.0/Mimir_Prompts.md)
+
+### Evaluation and Testing
+1. [Prompt Testing Framework Documentation](https://github.com/Jdesiree112/Technical_Portfolio/blob/main/Prompting/Documents/Prompt_Iteration_Mimir-Examples/Prompt_Testing_Framework.md)
